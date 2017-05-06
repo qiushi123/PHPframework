@@ -6,9 +6,8 @@ class imooc
 
     public static function run()
     {
-        p("ok");
         $route=new \core\lib\route();
-        p($route);
+//        p($route);
     }
 
     public static function load($class)
@@ -18,7 +17,7 @@ class imooc
         } else {
             $class = str_replace('\\', '/', $class);//用/替换\
             $file = IMOOC . '/' . $class . '.php';
-            p($file);
+//            p($file);
             if (is_file($file)) {
                 include $file;
                 self::$classMap[$class] = $class;
